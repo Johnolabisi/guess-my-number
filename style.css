@@ -45,6 +45,7 @@ main {
   font-size: 2rem;
 }
 
+
 /* ELEMENTS STYLE */
 h1 {
   font-size: 4rem;
@@ -116,4 +117,101 @@ h1 {
 
 .label-score {
   margin-bottom: 2rem;
+}
+
+
+
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    height: auto;
+    padding: 4rem 2rem;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .guess {
+    width: 60%;
+    font-size: 4rem;
+  }
+
+  .number {
+    font-size: 5rem;
+    width: 13rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+
+  header {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  h1 {
+    position: static;
+    transform: none;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .between,
+  .again {
+    position: static;
+    display: block;
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .number {
+    position: static;
+    transform: none;
+    margin: 2rem auto;
+  }
+
+  main {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .guess {
+    width: 80%;
+    font-size: 3rem;
+    padding: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+    padding: 1.2rem 2rem;
+  }
+
+  .message {
+    margin-bottom: 4rem;
+  }
+}
+
+
+  
+@media (max-width: 400px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .guess {
+    width: 90%;
+    font-size: 2.5rem;
+  }
+
+  .number {
+    font-size: 3.5rem;
+    width: 10rem;
+  }
 }
