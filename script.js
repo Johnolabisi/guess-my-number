@@ -1,8 +1,11 @@
 'use strict';
 
-let hiddenNumber = Math.trunc(Math.random() * 20) + 1;
+let hiddenNumber = Math.trunc(Math.random() * 50) + 1;
 let score = 20; 
 let highScore = 0;
+
+const correctSound = new Audio('Yay.mp3');
+const notCorrectSound = new Audio('Fah.mp3');
 
 
 
@@ -17,6 +20,8 @@ document.querySelector('.check').addEventListener("click", function(){
     /// When guess equals hidden number
     }else if(guess === hiddenNumber){
          document.querySelector('.message').textContent = "🎊Congratulations";
+        correctSound.currentTime = 0;
+        correctSound.play();
         document.querySelector('.number').textContent = hiddenNumber;
 
          document.querySelector('body').style.backgroundColor = '#60b347';
@@ -29,7 +34,11 @@ document.querySelector('.check').addEventListener("click", function(){
     /// When guess is greater than score
         }else if(guess > hiddenNumber){
         if(score > 1){
+            
             document.querySelector('.message').textContent = "📈Too High";
+            notCorrectSound.currentTime = 0; 
+            notCorrectSound.play();
+
             score--;
             document.querySelector('.score').textContent = score;
         }else{
@@ -43,6 +52,9 @@ document.querySelector('.check').addEventListener("click", function(){
     }else if(guess < hiddenNumber){
          if(score > 1){
             document.querySelector('.message').textContent = "📉Too Low";
+            notCorrectSound.currentTime = 0; 
+            notCorrectSound.play();
+
             score--;
             document.querySelector('.score').textContent = score;
         }else{
