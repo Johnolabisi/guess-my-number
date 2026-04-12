@@ -5,7 +5,7 @@ let score = 20;
 let highScore = 0;
 
 const correctSound = new Audio('Yay.mp3');
-const notCorrectSound = new Audio('Fah.mp3');
+const notCorrectSound = new Audio('Fahh.mp3');
 
 
 
@@ -34,7 +34,7 @@ document.querySelector('.check').addEventListener("click", function(){
     /// When guess is greater than score
         }else if(guess > hiddenNumber){
         if(score > 1){
-            document.querySelector('body').style.backgroundColor = "#FF0000";
+            document.querySelector('body').style.backgroundColor = "#800517";
             document.querySelector('.message').textContent = "📈Too High";
             notCorrectSound.currentTime = 0; 
             notCorrectSound.play();
@@ -44,7 +44,7 @@ document.querySelector('.check').addEventListener("click", function(){
         }else{
             document.querySelector('.message').textContent = "💥You lost the game";
              document.querySelector('.score').textContent = 0;
-             document.querySelector('body').style.backgroundColor = "#FF0000";
+             document.querySelector('body').style.backgroundColor = "#800517";
         }
 
        
