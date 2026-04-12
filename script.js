@@ -34,7 +34,7 @@ document.querySelector('.check').addEventListener("click", function(){
     /// When guess is greater than score
         }else if(guess > hiddenNumber){
         if(score > 1){
-            
+            document.querySelector('body').style.backgroundColor = "#FF0000";
             document.querySelector('.message').textContent = "📈Too High";
             notCorrectSound.currentTime = 0; 
             notCorrectSound.play();
@@ -54,7 +54,7 @@ document.querySelector('.check').addEventListener("click", function(){
             document.querySelector('.message').textContent = "📉Too Low";
             notCorrectSound.currentTime = 0; 
             notCorrectSound.play();
-
+              document.querySelector('body').style.backgroundColor = "#FF0000";
             score--;
             document.querySelector('.score').textContent = score;
         }else{
