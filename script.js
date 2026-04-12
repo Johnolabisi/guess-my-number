@@ -54,13 +54,13 @@ document.querySelector('.check').addEventListener("click", function(){
             document.querySelector('.message').textContent = "📉Too Low";
             notCorrectSound.currentTime = 0; 
             notCorrectSound.play();
-              document.querySelector('body').style.backgroundColor = "#FF0000";
+              document.querySelector('body').style.backgroundColor = "#800517";
             score--;
             document.querySelector('.score').textContent = score;
         }else{
             document.querySelector('.message').textContent = "💥You lost the game";
             document.querySelector('.score').textContent = 0;
-            document.querySelector('body').style.backgroundColor = "#FF0000";
+            document.querySelector('body').style.backgroundColor = "#800517";
             }  
         }
     });
